@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+  <meta charset="UTF-8">
+  <title>Es1_esame</title>
+  <style>
+  @import url("https://fonts.googleapis.com/css?family=BioRhyme:200");
+  @import url("https://fonts.googleapis.com/css?family=Inconsolata:400,700");
+
+  .h1 {
+  font-size: 50px;
+  font-family: "BioRhyme";
+  color: blue;
+  font-weight: 200;
+  text-align: center;
+}
+
+
+.h3 {
+  color: blue;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Inconsolata';
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+
+}
+
+.container1 {
+height: 80vh;
+width: 80vw;
+position: absolute;
+top: 15%; left:10vw;
+right: 5%;
+border: 3px solid blue;
+padding: 10px;
+}
+
+.zio{
+  position:absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  font-style: italic;
+  font-family: didot;
+  font-size: 40px;
+  text-align: center;
+  color: blue;
+}
+#v2 {
+display: none;
+}
+#v3 {
+display: none;
+}
+#v4 {
+display: none;
+
+}
+
+
+@keyframes pulsa {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+.pulsante{
+  animation: pulsa 1s infinite alternate;
+}
+
+</style>
+
+</head>
+
+<body>
+<div class="h1"> I will wade out by E.E. Cummings </div>
+  <div class="container1">
+  <div class="h3"> Hover and touch the verses to read the poem! <br> </div> <div id="q1" class="quadrato sinistra alto"> </div>
+  <div id='v4' class='zio pulsante'> and leap into the ripe air </div>
+  <div id='v3' class='zio'> I will take the sun in my mouth </div>
+  <div id='v2' class='zio'> till my thighs are steeped in burning flowers </div>
+  <div id='v1' class='zio'> I will wade out </div>
+</div>
+
+  <script >
+  function alzav1() {
+    $('#v1').animate({'top':'35%'}, 1000)
+    $('#v2').fadeIn(1000)
+  }
+  $('#v1').on('mouseover', alzav1)
+
+  function alzav2() {
+    $('#v1').fadeOut(800)
+    $('#v2').animate({'top':'35%'}, 1000)
+    $('#v3').fadeIn(1000)
+
+  }
+  $('#v2').on('click', alzav2)
+
+  function alzav3() {
+    $('#v2').fadeOut(800)
+    $('#v3').animate({'top':'35%'}, 1000)
+    $('#v4').fadeIn(1000)
+
+  }
+  $('#v3').on('click', alzav3)
+
+  function click4(){
+    $('#v4').toggleclass('pulsante')
+  }
+  $('#v3').on('click', click4)
+
+
+</script>
+
+</body>
+
+</html>

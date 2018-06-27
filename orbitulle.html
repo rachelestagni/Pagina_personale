@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+  <meta charset="UTF-8">
+  <title>Orbits</title>
+  <style>
+  @import url("https://fonts.googleapis.com/css?family=BioRhyme:200");
+  @import url("https://fonts.googleapis.com/css?family=Inconsolata:400,700");
+
+  .h1 {
+  font-size: 50px;
+  font-family: "BioRhyme";
+  color: blue;
+  font-weight: 200;
+  text-align: center;
+}
+
+.h2 {
+  color: blue;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Inconsolata';
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+}
+
+
+.container1 {
+height: 80vh;
+width: 80vw;
+position: absolute;
+top: 15%; left:10vw;
+right: 5%;
+border: 3px solid blue;
+padding: 10px;
+}
+
+@keyframes ruota {
+    0% {transform: rotate(0)}
+    100% {transform: rotate(7200deg)}
+
+}
+#frame {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100px; width: 100px;
+    transition: 1s;
+}
+#orbita {
+    animation: ruota 20s linear infinite;
+    border-radius: 50%;
+    border: 1px dashed blue;
+    height: 100%; width: 100%;
+}
+#frame:hover {
+    height: 200px; width: 200px;
+    transition: 1s;
+}
+#satellite {
+    height: 30px; width: 30px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+
+
+
+</style>
+
+</head>
+
+<body>
+<div class="h1"> Orbits </div>
+  <div class="container1">
+  <div class="h2"> Hover on the orbits! </div>   <div id="frame">
+        <div id="orbita">
+            <div id="satellite"></div>
+        </div>
+    </div>
+
+
+  <script >
+
+
+
+</script>
+
+</body>
+
+</html>
